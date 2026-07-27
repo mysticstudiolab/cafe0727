@@ -16,9 +16,9 @@ export default function Header({ onExcelFileSelected, isUploading, user, isAdmin
   }
 
   return (
-    <header className="flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
-      <h1 className="text-lg font-semibold text-gray-900">우리 동네 카페 지도</h1>
-      <div className="flex items-center gap-2">
+    <header className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-200 bg-white px-4 py-3 sm:px-6 sm:py-4">
+      <h1 className="text-base font-semibold text-gray-900 sm:text-lg">우리 동네 카페 지도</h1>
+      <div className="flex flex-wrap items-center gap-2">
         {isAdmin && (
           <>
             <input
@@ -40,7 +40,7 @@ export default function Header({ onExcelFileSelected, isUploading, user, isAdmin
         )}
         {user ? (
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">{user.email}</span>
+            <span className="max-w-[100px] truncate text-sm text-gray-600 sm:max-w-none">{user.email}</span>
             <button
               type="button"
               onClick={onLogoutClick}

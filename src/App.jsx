@@ -187,13 +187,13 @@ export default function App() {
       />
 
       {uploadError && (
-        <div className="mx-6 mt-4 rounded-md border border-red-300 bg-red-50 px-4 py-2 text-sm text-red-700">
+        <div className="mx-4 mt-4 rounded-md border border-red-300 bg-red-50 px-4 py-2 text-sm text-red-700 sm:mx-6">
           {uploadError}
         </div>
       )}
 
       {cafesLoadError && (
-        <div className="mx-6 mt-4 rounded-md border border-red-300 bg-red-50 px-4 py-2 text-sm text-red-700">
+        <div className="mx-4 mt-4 rounded-md border border-red-300 bg-red-50 px-4 py-2 text-sm text-red-700 sm:mx-6">
           카페 목록을 불러오지 못했어요: {cafesLoadError}
         </div>
       )}
@@ -201,11 +201,11 @@ export default function App() {
       <FailedCafeList failedCafes={failedCafes} />
 
       <main className="flex flex-1 flex-col">
-        <div className="flex h-[420px] w-full gap-4 px-6 pt-4">
-          <div className="flex-1">
+        <div className="flex w-full flex-col gap-4 px-4 pt-4 sm:h-[420px] sm:flex-row sm:px-6">
+          <div className="h-64 sm:h-full sm:flex-1">
             <KakaoMap cafes={cafes} onMarkerClick={handleMarkerClick} focusTarget={mapFocusTarget} />
           </div>
-          <div className="w-72 shrink-0">
+          <div className="h-64 w-full shrink-0 sm:h-full sm:w-72">
             <MyVisitsSection
               isLoggedIn={Boolean(user)}
               visits={myVisits}

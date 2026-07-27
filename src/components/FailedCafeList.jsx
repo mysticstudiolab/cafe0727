@@ -3,7 +3,7 @@ export default function FailedCafeList({ failedCafes }) {
   if (failedCafes.length === 0) return null
 
   return (
-    <div className="mx-6 mt-4 rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+    <div className="mx-4 mt-4 rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 sm:mx-6">
       <p className="font-medium">주소를 찾지 못한 카페 {failedCafes.length}개 (지도에는 표시되지 않음)</p>
       <ul className="mt-1 list-disc space-y-0.5 pl-5">
         {failedCafes.map((cafe) => (
